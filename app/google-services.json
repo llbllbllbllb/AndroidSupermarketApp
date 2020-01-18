@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "544150009925",
+    "firebase_url": "https://supermarket-e27fd.firebaseio.com",
+    "project_id": "supermarket-e27fd",
+    "storage_bucket": "supermarket-e27fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544150009925:android:a80d484ce467fede144b2c",
+        "android_client_info": {
+          "package_name": "com.libangliang.supermarket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544150009925-bluuhtbus1b26fqumha057an5c2p690v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.libangliang.supermarket",
+            "certificate_hash": "7c8e660d8965a52ba1ffcee5708c23e2e0c9ecab"
+          }
+        },
+        {
+          "client_id": "544150009925-hga1plor7b9bc19qk1de96r38c982h76.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_glHt2nc9bEnqcuee3mpfnRZxvwm7xTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544150009925-hga1plor7b9bc19qk1de96r38c982h76.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
