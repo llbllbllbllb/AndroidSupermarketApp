@@ -16,9 +16,19 @@
         android:src="@drawable/select_image"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
-        android:background="@drawable/inputs_text"
-        android:tint="@color/colorPrimary"
+        android:background="@drawable/select_image_frame"
+        />
 
+    <ImageView
+        android:id="@+id/select_product_image_background"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/select_image_frame"
         />
 
     <TextView
@@ -114,6 +124,17 @@
         android:textAllCaps="false"
 
         />
+
+    <ProgressBar
+        android:id="@+id/add_new_product_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_new_product"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+
+        android:indeterminateDrawable="@drawable/progress_bar"
+        android:visibility="invisible" />
 
 
 </RelativeLayout>
