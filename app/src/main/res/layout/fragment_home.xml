@@ -15,5 +15,6 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:tag="home_disable_back_button"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

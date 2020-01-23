@@ -29,12 +29,17 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:19.2.0'
     implementation 'com.google.firebase:firebase-storage:19.1.0'
 
+    implementation 'com.firebaseui:firebase-ui-database:6.2.0'
+
     implementation 'io.paperdb:paperdb:2.6'
     //Paper is a fast NoSQL-like storage for Java/Kotlin objects on Android with automatic schema migration support.
     // Store Remember me password
 
+    //circle image view for user profile display
     implementation 'de.hdodenhof:circleimageview:3.0.2'
-    //circle image view
+
+    //image downloading and caching library for Android for product image downloading
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'

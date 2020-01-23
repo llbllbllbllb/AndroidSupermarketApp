@@ -28,6 +28,13 @@ public class MainActivity extends AppCompatActivity {
 
     private String parentDBName = "Users";
 
+    static MainActivity mainActivity;
+
+
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
         registerButton = (Button) findViewById(R.id.main_register_btn);
         loginButton = (Button) findViewById(R.id.main_login_btn);
+
+        mainActivity = this;
 
         Paper.init(this);
 
@@ -67,6 +76,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public static MainActivity getInstance(){
+        return mainActivity;
+    }
+
+
     private void allowAccess(final String phone, final String password) {
         final DatabaseReference RootRef;
         RootRef = FirebaseDatabase.getInstance().getReference();
@@ -76,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.child(parentDBName).child(phone).exists()){
                     //found phone in database
-                    //retrive data and feed it in a User class
+                    //retrieve data and feed it in a User class
                     Users userData = dataSnapshot.child(parentDBName).child(phone).getValue(Users.class);
                     if(userData.getPhone().equals(phone)){
                         //then check password
@@ -86,7 +100,11 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this,"Login Successfully.",Toast.LENGTH_SHORT).show();
                             //send user to home activity
                             Intent intent = new Intent(MainActivity.this,HomeActivity.class);
+
+                            //pass current user to main activity
+                            Prevalent.currentOnlineUser = userData;
                             startActivity(intent);
+
                         }
                         else{
                             //not correct password

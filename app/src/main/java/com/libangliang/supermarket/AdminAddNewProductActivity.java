@@ -172,6 +172,8 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Uri> task) {
                         if(task.isSuccessful()){
 
+                            downloadImageURL = task.getResult().toString();
+
                             Toast.makeText(AdminAddNewProductActivity.this,"Getting Product Image URL Successfully",Toast.LENGTH_SHORT).show();
                             saveProductInfoToDatabase();
                         }
